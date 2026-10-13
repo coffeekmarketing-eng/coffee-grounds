@@ -1,5 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://marketing.coffeekingcorp.com/</loc><changefreq>monthly</changefreq></url>
-  <url><loc>https://marketing.coffeekingcorp.com/our-story.html</loc><lastmod>2026-08-27</lastmod><changefreq>yearly</changefreq></url>
-</urlset>
+coffee-grounds/
+├── CNAME
+├── index.html
+├── robots.txt
+├── sitemap.xml
+├── our-story/
+│   └── index.html
+└── hot-chocolate/
+    ├── index.html
+    └── images/
+        ├── coffee-king-logo.webp
+        ├── hc-hero.jpg
+        ├── hc-white.jpg
+        ├── hc-original.jpg
+        ├── hc-dark.jpg
+        └── hc-thick.jpg
