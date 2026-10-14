@@ -1,67 +1,209 @@
-<!-- 04 — CONTACT FORM -->
-<section id="contact-form" class="scroll-mt-24 bg-ck-cream">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16 sm:py-20 lg:py-28 grid lg:grid-cols-12 gap-10 lg:gap-16">
-        <div class="lg:col-span-5">
-            <p class="rule-index">04</p>
-            <p class="eyebrow text-ck-mute mt-3">Get in touch</p>
-            <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-[0.95] mt-4">Tell us what you need.</h2>
-            <p class="mt-6 text-lg text-ck-mute leading-relaxed">
-                Leave your details and a member of the Coffee King team will get back to you to help you find the right products for your business.
-            </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee King Coffee: Find Your Coffee King</title>
+    <meta name="description" content="Four distinctive Coffee King coffees, from smooth and balanced to bold and intense. Explore tasting notes, find your perfect blend and learn how to brew every cup.">
+    <meta name="theme-color" content="#2D1B0E">
+    <!-- PEGA AQUÍ LA LÍNEA DEL FAVICON -->
+
+    <link rel="canonical" href="https://marketing.coffeekingcorp.com/coffee-blends/">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Coffee King">
+    <meta property="og:title" content="Coffee | Coffee King">
+    <meta property="og:description" content="Four distinctive coffees, from smooth and balanced to bold and intense. Find your Coffee King.">
+    <meta property="og:url" content="https://marketing.coffeekingcorp.com/coffee-blends/">
+    <meta name="twitter:card" content="summary">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Coffee King Coffee",
+      "url": "https://marketing.coffeekingcorp.com/coffee-blends/",
+      "description": "Four distinctive Coffee King coffees: Italian Gourmet, Original Rich & Smooth, Barista Premium and Gourmet Decaf.",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Italian Gourmet" },
+          { "@type": "ListItem", "position": 2, "name": "Original Rich & Smooth" },
+          { "@type": "ListItem", "position": 3, "name": "Barista Premium" },
+          { "@type": "ListItem", "position": 4, "name": "Gourmet Decaf" }
+        ]
+      }
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Black&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ck-cream':   '#F5F1EA',
+                        'ck-cream-2': '#EFEAE0',
+                        'ck-coffee':  '#2D1B0E',
+                        'ck-coffee-2':'#3D2409',
+                        'ck-orange':  '#FFA228',
+                        'ck-orange-2':'#E88A15',
+                        'ck-mute':    '#6B5D4F'
+                    },
+                    fontFamily: {
+                        'display': ['"Archivo Black"', 'Archivo', 'sans-serif'],
+                        'sans':    ['Archivo', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        html, body { overflow-x: hidden; max-width: 100%; }
+        body { font-family: 'Archivo', system-ui, sans-serif; }
+        h1, h2, h3, p, span, a { overflow-wrap: break-word; }
+        img { max-width: 100%; }
+        .font-display { font-family: 'Archivo Black', 'Archivo', sans-serif; letter-spacing: -0.01em; }
+        .eyebrow { font-family: 'Archivo', sans-serif; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.72rem; }
+
+        .btn-orange { transition: background .2s ease; }
+        .btn-orange:hover { background: #E88A15; }
+
+        .btn-ghost { transition: background .2s ease, color .2s ease; }
+        .btn-ghost:hover { background: #F5F1EA; color: #2D1B0E; }
+
+        .coffee-card { transition: transform .25s ease, box-shadow .25s ease; }
+        .coffee-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -18px rgba(45,27,14,.25); }
+
+        .product-media { overflow: hidden; }
+        .product-media img { transition: transform .6s ease; }
+        .product-media:hover img { transform: scale(1.03); }
+
+        .rule-index {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 0.78rem;
+            letter-spacing: 0.16em;
+            color: #FFA228;
+        }
+
+        .chip {
+            display: inline-block;
+            border: 1px solid currentColor;
+            border-radius: 999px;
+            padding: .4rem .85rem;
+            font-weight: 700;
+            font-size: .7rem;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+
+        .scroll-cue { transition: opacity .2s ease; }
+        .scroll-cue:hover { opacity: .7; }
+        .scroll-cue span { display: inline-block; animation: nudge 2.4s ease-in-out infinite; }
+        @keyframes nudge {
+            0%, 100% { transform: translateY(0); }
+            50%      { transform: translateY(5px); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            * { animation: none !important; transition: none !important; }
+        }
+
+        a:focus-visible, button:focus-visible {
+            outline: 3px solid #FFA228;
+            outline-offset: 3px;
+        }
+    </style>
+</head>
+<body class="bg-ck-cream text-ck-coffee">
+
+<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:bg-ck-orange focus:text-ck-coffee focus:px-4 focus:py-2 focus:font-bold">Skip to content</a>
+
+<!-- SHIPPING BAR -->
+<div class="bg-ck-coffee text-white text-center text-[10px] sm:text-xs tracking-[0.14em] uppercase py-2.5 px-4 font-bold">
+    Free shipping over £60 &nbsp;·&nbsp; Visit us in-store
+</div>
+
+<!-- HEADER -->
+<header class="bg-ck-cream border-b border-ck-coffee/10 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="flex items-center justify-between gap-4 h-16 sm:h-20 md:h-24">
+            <a href="#top" class="flex items-center" aria-label="Coffee King home">
+                <img src="images/coffee-king-logo.png" alt="Coffee King" class="h-5 sm:h-7 md:h-9 lg:h-11 w-auto">
+            </a>
+            <a href="https://coffeekingdirect.com/collections/coffee"
+               class="text-[11px] sm:text-xs md:text-sm font-bold tracking-wide uppercase hover:text-ck-orange whitespace-nowrap shrink-0">
+                Shop coffee <span aria-hidden="true">↗</span>
+            </a>
         </div>
+    </div>
+</header>
 
-        <form action="https://coffeekingdirect.com/contact#contact_form" method="post" accept-charset="UTF-8"
-              class="lg:col-span-7 bg-white border border-ck-coffee/10 p-6 sm:p-8 grid sm:grid-cols-2 gap-5">
-            <input type="hidden" name="form_type" value="contact">
-            <input type="hidden" name="utf8" value="✓">
-            <input type="hidden" name="contact[Source page]" value="Coffee Blends landing">
+<main id="main">
 
-            <div>
-                <label for="cf-name" class="eyebrow text-ck-mute">Name *</label>
-                <input id="cf-name" name="contact[name]" type="text" required autocomplete="name"
-                       class="mt-2 w-full border border-ck-coffee/20 bg-ck-cream px-4 py-3 focus:outline-none focus:border-ck-orange focus:ring-2 focus:ring-ck-orange/30">
-            </div>
-            <div>
-                <label for="cf-email" class="eyebrow text-ck-mute">Email *</label>
-                <input id="cf-email" name="contact[email]" type="email" required autocomplete="email"
-                       class="mt-2 w-full border border-ck-coffee/20 bg-ck-cream px-4 py-3 focus:outline-none focus:border-ck-orange focus:ring-2 focus:ring-ck-orange/30">
-            </div>
-            <div>
-                <label for="cf-phone" class="eyebrow text-ck-mute">Phone</label>
-                <input id="cf-phone" name="contact[phone]" type="tel" autocomplete="tel"
-                       class="mt-2 w-full border border-ck-coffee/20 bg-ck-cream px-4 py-3 focus:outline-none focus:border-ck-orange focus:ring-2 focus:ring-ck-orange/30">
-            </div>
-            <div>
-                <label for="cf-business" class="eyebrow text-ck-mute">Business name</label>
-                <input id="cf-business" name="contact[Business name]" type="text" autocomplete="organization"
-                       class="mt-2 w-full border border-ck-coffee/20 bg-ck-cream px-4 py-3 focus:outline-none focus:border-ck-orange focus:ring-2 focus:ring-ck-orange/30">
-            </div>
-            <div class="sm:col-span-2">
-                <label for="cf-interest" class="eyebrow text-ck-mute">I'm interested in</label>
-                <select id="cf-interest" name="contact[Interested in]"
-                        class="mt-2 w-full border border-ck-coffee/20 bg-ck-cream px-4 py-3 focus:outline-none focus:border-ck-orange focus:ring-2 focus:ring-ck-orange/30">
-                    <option>Coffee</option>
-                    <option>Hot chocolate</option>
-                    <option>Coffee machines &amp; equipment</option>
-                    <option>Opening a wholesale account</option>
-                    <option>Something else</option>
-                </select>
-            </div>
-            <div class="sm:col-span-2">
-                <label for="cf-message" class="eyebrow text-ck-mute">Message *</label>
-                <textarea id="cf-message" name="contact[body]" rows="5" required
-                          class="mt-2 w-full border border-ck-coffee/20 bg-ck-cream px-4 py-3 focus:outline-none focus:border-ck-orange focus:ring-2 focus:ring-ck-orange/30"></textarea>
-            </div>
-            <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                <p class="text-sm text-ck-mute max-w-sm">
-                    By sending this form you agree to be contacted by Coffee King about your enquiry. See our
-                    <a href="https://coffeekingdirect.com/policies/privacy-policy" class="underline hover:text-ck-orange-2">Privacy Policy</a>.
+<!-- HERO -->
+<section id="top" class="relative bg-ck-coffee">
+    <div class="relative h-[78vh] sm:h-[72vh] min-h-[500px] sm:min-h-[540px] max-h-[860px] overflow-hidden">
+        <img src="images/coffee-hero.png"
+             alt="A cream stoneware cup of coffee on a light stone surface with coffee beans, dark chocolate, toffee and hazelnuts"
+             width="1536" height="1024"
+             class="absolute inset-0 w-full h-full object-cover object-[72%_center] lg:object-center"
+             fetchpriority="high">
+        <div class="absolute inset-0 bg-gradient-to-t from-ck-coffee via-ck-coffee/60 to-ck-coffee/10 lg:bg-gradient-to-r lg:from-ck-coffee/90 lg:via-ck-coffee/50 lg:to-transparent"></div>
+
+        <div class="relative h-full max-w-7xl mx-auto px-6 lg:px-10 flex items-end lg:items-center pb-12 sm:pb-16 lg:pb-0">
+            <div class="max-w-xl text-white">
+                <p class="eyebrow text-ck-orange">Discover Coffee King</p>
+                <h1 class="font-display text-[2.6rem] leading-[0.95] sm:text-6xl lg:text-7xl mt-4">
+                    Find your <span class="text-ck-orange">Coffee King.</span>
+                </h1>
+                <p class="mt-5 sm:mt-6 text-base sm:text-lg text-white/80 leading-relaxed">
+                    Four distinctive coffees, from smooth and balanced to bold and intense. Explore the tasting notes, discover your perfect blend and learn how to make every cup extraordinary.
                 </p>
-                <button type="submit"
-                        class="btn-orange inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-ck-orange text-ck-coffee font-bold uppercase tracking-wide text-sm px-8 py-4">
-                    Send message <span aria-hidden="true">↗</span>
-                </button>
+                <a href="#blends" class="scroll-cue inline-flex items-center gap-2 mt-8 eyebrow text-white">
+                    Discover <span aria-hidden="true">↓</span>
+                </a>
             </div>
-        </form>
+        </div>
     </div>
 </section>
+
+<!-- BLEND SELECTOR -->
+<section id="blends" class="scroll-mt-24 bg-ck-cream">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16 sm:py-20 lg:py-24">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl leading-[0.95]">Which sounds like you?</h2>
+            <p class="eyebrow text-ck-mute">Tap a blend to jump to it</p>
+        </div>
+
+        <div class="mt-10 grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <a href="#italian" class="coffee-card group flex flex-col bg-white border border-ck-coffee/10 p-6 lg:p-7">
+                <span class="rule-index">01</span>
+                <span class="eyebrow text-ck-mute mt-4">The everyday all-rounder</span>
+                <span class="font-display text-2xl leading-tight mt-2">Italian Gourmet</span>
+                <span class="text-sm text-ck-mute mt-3">Milk chocolate · Caramel · Praline</span>
+                <span class="eyebrow text-ck-orange-2 mt-auto pt-8 group-hover:text-ck-coffee">Discover ↓</span>
+            </a>
+            <a href="#original" class="coffee-card group flex flex-col bg-white border border-ck-coffee/10 p-6 lg:p-7">
+                <span class="rule-index">02</span>
+                <span class="eyebrow text-ck-mute mt-4">Bold, dark and satisfying</span>
+                <span class="font-display text-2xl leading-tight mt-2">Original Rich &amp; Smooth</span>
+                <span class="text-sm text-ck-mute mt-3">Dark cacao · Cinder toffee · Warm spice</span>
+                <span class="eyebrow text-ck-orange-2 mt-auto pt-8 group-hover:text-ck-coffee">Discover ↓</span>
+            </a>
+            <a href="#barista" class="coffee-card group flex flex-col bg-ck-coffee text-white p-6 lg:p-7">
+                <span class="rule-index">03</span>
+                <span class="eyebrow text-white/60 mt-4">Built for expressive espresso</span>
+                <span class="font-display text-2xl leading-tight mt-2">Barista Premium</span>
+                <span class="text-sm text-white/70 mt-3">Caramel · Hazelnut · Cocoa</span>
+                <span class="eyebrow text-ck-orange mt-auto pt-8 group-hover:text-white">Discover ↓</span>
+            </a>
+            <a href="#decaf" class="coffee-card group flex flex-col bg-white border border-ck-coffee/10 p-6 lg:p-7">
+                <span class="rule-index">04</span>
